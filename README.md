@@ -12,12 +12,16 @@ Seeed Studio XIAO nRF52840を使った、ChatGPT Desktop向けの非公式BLEコ
 | 項目 | 内容 | 状態 |
 | --- | --- | --- |
 | MCU | Seeed Studio XIAO nRF52840（Plusではないモデル） | 確定・所有済み |
+| MCU実装 | PCBへ直接はんだ付け・背面GPIO使用 | 方針確定・接続設計未検証 |
 | 接続 | Bluetooth Low Energy HID over GATT | 確定 |
 | キー | 13キー | 確定 |
+| スイッチ実装 | Kailh CPG135001S30 ×13 | 採用確定・適合検証待ち |
 | スイッチ | JezailFunder 霧、Kailh Choc V2互換 | 購入済み |
 | キーキャップ | LCK AIキーキャップセット | 購入済み |
-| 左上 | 押し込み対応ロータリーエンコーダー | 配置確定・型番未定 |
-| 右上 | ジョイスティック | 配置確定・型番未定 |
+| 左上 | Bourns PEC11R-4215F-S0024（押込み付き） | 採用方針確定・実装依頼条件確認待ち |
+| 右上 | Alps Alpine SKRHABE010（4方向＋中央押込み） | 確定・要調達 |
+| キー照明 | OPSCO SK6803MINI-E-001 ×13 | 採用確定・電源／配置検証待ち |
+| 実装依頼 | LED・エンコーダー等の難しい部品はJLCPCBへ依頼 | 方針確定・部品別可否確認待ち |
 | ファームウェア | Zephyrベースの専用実装 | 方針確定 |
 | PCB | KiCad | 未着手 |
 
@@ -39,11 +43,13 @@ KLEの生データは[`layout/keyboard-layout.json`](layout/keyboard-layout.json
 1. XIAO単体でBLE Vendor HIDを実装する
 2. ChatGPT Desktopによる検出と双方向通信を確認する
 3. 13個目のCommand Key候補を検証する
-4. ジョイスティックとエンコーダーの型番を決める
+4. 選定済み部品の適合・実装条件を確認し、電源部品とバッテリーを選定する
 5. GPIO割り当てと回路図を確定する
 6. PCB、プレート、ケースを設計する
 
 仕様は[`docs/`](docs/)にまとめています。未確認事項は推測と区別し、実機で確認できた内容だけを「検証済み」へ移します。
+
+PCB発注までの具体的な作業と完了条件は、[`docs/pcb-order-checklist.md`](docs/pcb-order-checklist.md)で管理します。
 
 ## 参考資料
 

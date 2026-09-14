@@ -9,12 +9,16 @@
 
 ## Hardware constraints
 
-- Target Seeed Studio XIAO nRF52840, non-Plus model.
+- Target Seeed Studio XIAO nRF52840, non-Plus model. Solder it directly to the PCB and use reverse-side GPIO pads; preserve reset and SWD access.
 - Preserve the 13-key KLE layout unless a design decision explicitly changes it.
-- The top-left control is a rotary encoder and the top-right control is a joystick.
+- The top-left control is a Bourns PEC11R-4215F-S0024 push rotary encoder, with outsourced assembly subject to sourcing/process validation. The top-right control is an Alps Alpine SKRHABE010 four-direction switch with center push.
 - Key switches are Kailh Choc V2-compatible JezailFunder Mist switches.
-- Optimize for BLE battery life. Status lighting must be dimmable and able to turn off.
-- Do not finalize footprints before the exact encoder, joystick, socket, and battery connector parts are selected.
+- All 13 key switches must use Kailh CPG135001S30 hot-swap sockets, to be soldered by the builder. Part selection is confirmed; Mist fit, PCB holes, and RGB clearance remain unverified. This does not make the encoder or joystick socketed.
+- Place one OPSCO SK6803MINI-E-001 addressable RGB LED under each of the 13 key switches; plan JLCPCB assembly. Do not add separate decorative underglow to v0.1.
+- Optimize for BLE battery life. Status lighting must be dimmable and able to turn off completely.
+- Part selection is not footprint or electrical validation. Verify the selected encoder, socket, joystick, and LED against their exact drawings; select the battery connector before finalizing its footprint.
+- Do not infer SK6803MINI-E-001 supply range, 3.3V logic compatibility, standby current, or total current from another SK68xx variant or the listed 3mA optical test current. Verify the exact datasheet and hardware.
+- Outsource difficult assembly operations, but confirm each part's availability, process, and orientation before ordering. Knob appearance is deferred; reserve a validated mechanical envelope.
 
 ## Firmware constraints
 
