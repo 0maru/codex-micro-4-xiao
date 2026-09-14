@@ -1,0 +1,18 @@
+# Zephyr / west
+.west/
+build/
+zephyr/.cache/
+
+# KiCad generated files
+*-backups/
+*.bak
+*.bck
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+~*
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
