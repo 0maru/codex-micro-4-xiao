@@ -27,12 +27,12 @@ Seeed Studio XIAO nRF52840を使った、ChatGPT Desktop向けの非公式BLEコ
 
 | 段 | 左端 | 左中央 | 右中央 | 右端 |
 | --- | --- | --- | --- | --- |
-| 1 | Encoder | K01 | K02 | Joystick |
+| 1 | ロータリーエンコーダー | K01 | K02 | ジョイスティック |
 | 2 | K03 | K04 | K05 | K06 |
 | 3 | K07 | K08 | K09 | K10 |
 | 4 | 空き | K11 | K12 | K13 |
 
-KLEのRaw dataは[`layout/keyboard-layout.json`](layout/keyboard-layout.json)に保存しています。KLEには通常キーだけを記録し、ジョイスティックとエンコーダーはKiCadで配置します。
+KLEの生データは[`layout/keyboard-layout.json`](layout/keyboard-layout.json)に保存しています。KLEには通常キーだけを記録し、ジョイスティックとエンコーダーはKiCadで配置します。
 
 ## 進め方
 
@@ -43,7 +43,7 @@ KLEのRaw dataは[`layout/keyboard-layout.json`](layout/keyboard-layout.json)に
 5. GPIO割り当てと回路図を確定する
 6. PCB、プレート、ケースを設計する
 
-仕様は[`docs/`](docs/)にまとめています。未確認事項は推測と区別し、実機で確認できた内容だけを`Verified`へ移します。
+仕様は[`docs/`](docs/)にまとめています。未確認事項は推測と区別し、実機で確認できた内容だけを「検証済み」へ移します。
 
 ## 参考資料
 
@@ -51,6 +51,6 @@ KLEのRaw dataは[`layout/keyboard-layout.json`](layout/keyboard-layout.json)に
 - [Seeed Studio: XIAO nRF52840](https://wiki.seeedstudio.com/XIAO_BLE/)
 - [imliubo/codex-micro-4-core2](https://github.com/imliubo/codex-micro-4-core2) — 通信観察結果の参考
 
-## License
+## ライセンス
 
 このリポジトリで独自に作成したソースコードとドキュメントは[MIT License](LICENSE)で公開します。第三者の名称、商標、機器識別子およびプロトコルに対する権利は含まれません。詳細は[`NOTICE.md`](NOTICE.md)を参照してください。

@@ -1,10 +1,10 @@
-# Hardware
+# ハードウェア
 
-KiCad schematic, PCB, local symbols, footprints, and verified 3D models will live here.
+このディレクトリには、KiCadの回路図、PCB、プロジェクト固有のシンボル、フットプリント、確認済み3Dモデルを格納します。
 
-Do not create production footprints from storefront photos. Select exact joystick, encoder, socket, connector, and switch parts first, then verify every pad and mechanical dimension against manufacturer drawings.
+商品写真だけを基に製造用フットプリントを作成しません。ジョイスティック、ロータリーエンコーダー、ソケット、コネクター、スイッチの型番を確定してから、メーカーの寸法図と照合してパッドおよび外形寸法を確認します。
 
-Suggested layout:
+予定している構成：
 
 ```text
 hardware/
@@ -17,4 +17,4 @@ hardware/
     models/
 ```
 
-See [`../docs/hardware.md`](../docs/hardware.md) for current electrical and mechanical constraints.
+現在の電気的・機械的な制約は、[`../docs/hardware.md`](../docs/hardware.md)を参照してください。

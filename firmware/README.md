@@ -1,10 +1,10 @@
-# Firmware
+# ファームウェア
 
-This directory will contain an independent Zephyr application for Seeed Studio XIAO nRF52840.
+このディレクトリには、Seeed Studio XIAO nRF52840向けに独自実装するZephyrアプリケーションを格納します。
 
-The first milestone is a protocol PoC that exposes the observed vendor-defined BLE HID report and can be driven without the final PCB. Matrix, encoder, joystick, and lighting support will be added after host detection succeeds.
+最初の目標は、観察されたベンダー定義BLE HIDレポートを実装し、完成版PCBがなくても操作できるプロトコルPoCを作ることです。ChatGPT Desktopからの認識を確認した後、キーマトリクス、ロータリーエンコーダー、ジョイスティック、LED制御を追加します。
 
-## Intended structure
+## 予定している構成
 
 ```text
 firmware/
@@ -21,6 +21,6 @@ firmware/
     controls.h
 ```
 
-The exact Zephyr or nRF Connect SDK release is intentionally not pinned yet. Pin it when the first physical XIAO build succeeds, then add CI using the same toolchain version.
+使用するZephyrまたはnRF Connect SDKのバージョンは、まだ固定していません。XIAO実機で最初のビルドに成功した時点でバージョンを固定し、同じツールチェーンを使うCIを追加します。
 
-See [`../docs/protocol.md`](../docs/protocol.md) for the observed compatibility profile and PoC acceptance criteria.
+確認されている互換プロファイルとPoCの完了条件は、[`../docs/protocol.md`](../docs/protocol.md)を参照してください。
