@@ -13,6 +13,7 @@
 - Preserve the 13-key KLE layout unless a design decision explicitly changes it.
 - The top-left control is a rotary encoder and the top-right control is an Alps Alpine SKRHABE010 four-direction switch with center push.
 - Key switches are Kailh Choc V2-compatible JezailFunder Mist switches.
+- All 13 key switches must use hot-swap sockets. Socket soldering to the PCB is required; exact socket selection and compatibility validation remain open. This decision does not make the XIAO, encoder, or joystick socketed.
 - Place one independently addressable RGB LED under each of the 13 key switches. Do not add separate decorative underglow to v0.1.
 - Optimize for BLE battery life. Status lighting must be dimmable and able to turn off completely.
 - Do not finalize footprints before the exact encoder, socket, RGB LED, and battery connector parts are selected. Verify the SKRHABE010 footprint against the manufacturer land pattern.

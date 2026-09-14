@@ -3,7 +3,7 @@
 ## Fixed requirements
 
 - Seeed Studio XIAO nRF52840, non-Plus model
-- 13 independent Kailh Choc V2-compatible switches
+- 13 independent Kailh Choc V2-compatible switches, all mounted in hot-swap sockets
 - Top-left rotary encoder with push switch
 - Top-right Alps Alpine SKRHABE010 four-direction switch with center push, placed for right-handed operation
 - One independently addressable RGB LED under each of the 13 key switches
@@ -16,6 +16,14 @@
 The key layout is defined in [`../layout/keyboard-layout.json`](../layout/keyboard-layout.json). It contains only the 13 keyboard switches. Mechanical center coordinates for the joystick and encoder will be added in KiCad after their exact parts are selected.
 
 Use the purchased keycaps to confirm the final center-to-center pitch before locking PCB coordinates. KLE units alone are not manufacturing dimensions.
+
+## Hot-swap mounting
+
+Use 13 PCB-mounted hot-swap sockets for the purchased Mist switches. The sockets are soldered to the PCB; the key switches can then be removed without desoldering. This scope covers only the 13 keyboard switches, not the encoder, joystick, or XIAO.
+
+The socket manufacturer and exact part number remain unselected. Before routing, verify the chosen socket and footprint against the actual Mist switch pins, fixing holes, PCB thickness, and manufacturer drawings. Check each socket together with its RGB LED, plate, case, and battery clearance. Do not assume every low-profile socket is compatible.
+
+Include a small assembly trial before PCB ordering to practice socket soldering and supported switch insertion/removal. Plan access to support the socket during insertion and inspect for bent pins or lifted pads.
 
 ## Input matrix
 
@@ -78,7 +86,7 @@ Do not estimate runtime until the BLE PoC, scan loop, joystick, and LEDs have be
 ## Open part selections
 
 - rotary encoder and knob
-- Choc V2 hot-swap socket or direct soldering
+- exact hot-swap socket compatible with the purchased Mist switches
 - switch diodes
 - RGB LEDs
 - LiPo capacity and connector

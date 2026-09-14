@@ -9,6 +9,7 @@
 | 2026-09-14 | Use XIAO nRF52840 non-Plus | Already owned and suitable for low-power BLE |
 | 2026-09-14 | Use JezailFunder Mist switches | Purchased; quiet Choc V2-compatible linear switch |
 | 2026-09-14 | Use LCK AI keycaps | Purchased for the intended command layout |
+| 2026-09-14 | Use hot-swap sockets for all 13 key switches | Enables switch replacement and provides assembly practice for future keyboard projects; exact socket part remains open |
 | 2026-09-14 | Use Alps Alpine SKRHABE010 for the top-right control | Provides four digital directions and a center push without analog calibration |
 | 2026-09-14 | Place one addressable RGB LED under every key switch | Uses all 13 keys as a status-animation surface while consuming one data GPIO |
 | 2026-09-14 | Do not add separate decorative underglow to v0.1 | Avoids redundant LEDs and reduces battery load |
@@ -28,7 +29,7 @@
 ## Open decisions
 
 - Encoder part, detent count, shaft length, and knob
-- Direct-solder or hot-swap switches
+- Exact hot-swap socket part and footprint compatible with Mist switches and per-key RGB
 - Addressable RGB LED part and power-control circuit
 - Battery capacity, connector, and physical placement
 - Exposed-edge pins only or reverse-side XIAO pads
