@@ -17,7 +17,8 @@ Seeed Studio XIAO nRF52840を使った、ChatGPT Desktop向けの非公式BLEコ
 | スイッチ | JezailFunder 霧、Kailh Choc V2互換 | 購入済み |
 | キーキャップ | LCK AIキーキャップセット | 購入済み |
 | 左上 | 押し込み対応ロータリーエンコーダー | 配置確定・型番未定 |
-| 右上 | ジョイスティック | 配置確定・型番未定 |
+| 右上 | Alps Alpine SKRHABE010（4方向＋中央押込み） | 確定・要調達 |
+| キー照明 | 全13キーに個別制御RGB LED | 構成確定・型番未定 |
 | ファームウェア | Zephyrベースの専用実装 | 方針確定 |
 | PCB | KiCad | 未着手 |
 
@@ -39,7 +40,7 @@ KLEの生データは[`layout/keyboard-layout.json`](layout/keyboard-layout.json
 1. XIAO単体でBLE Vendor HIDを実装する
 2. ChatGPT Desktopによる検出と双方向通信を確認する
 3. 13個目のCommand Key候補を検証する
-4. ジョイスティックとエンコーダーの型番を決める
+4. エンコーダーとRGB LEDの型番を決める
 5. GPIO割り当てと回路図を確定する
 6. PCB、プレート、ケースを設計する
 

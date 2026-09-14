@@ -5,7 +5,9 @@
 - Seeed Studio XIAO nRF52840, non-Plus model
 - 13 independent Kailh Choc V2-compatible switches
 - Top-left rotary encoder with push switch
-- Top-right joystick, placed for right-handed operation
+- Top-right Alps Alpine SKRHABE010 four-direction switch with center push, placed for right-handed operation
+- One independently addressable RGB LED under each of the 13 key switches
+- No separate decorative underglow for v0.1
 - Bluetooth Low Energy operation from a rechargeable LiPo battery
 - USB-C access for charging, flashing, recovery, and development logs
 
@@ -15,43 +17,40 @@ The key layout is defined in [`../layout/keyboard-layout.json`](../layout/keyboa
 
 Use the purchased keycaps to confirm the final center-to-center pitch before locking PCB coordinates. KLE units alone are not manufacturing dimensions.
 
-## Input matrix options
+## Input matrix
 
-### Digital four-direction joystick
-
-The 13 keys, encoder push, four directions, and optional joystick push fit in a 4×5 matrix: up to 19 switch positions with nine GPIOs. Encoder quadrature uses two more GPIOs.
+The selected SKRHABE010 is a digital four-direction surface-mount switch with center push. The 13 keys, encoder push, four directions, and center push make 19 switch positions and fit in a 4×5 matrix. Encoder quadrature uses two more GPIOs and the addressable RGB chain uses one.
 
 | Function | GPIO count |
 | --- | ---: |
 | 4×5 matrix | 9 |
 | Encoder A/B | 2 |
-| Total | 11 |
-
-This consumes all edge GPIOs on the non-Plus XIAO. Lighting, battery sensing, or future features would require reverse-side pads, an I/O expander, or a different matrix/driver design.
-
-### Analog joystick
-
-The 13 keys and encoder push fit in a 4×4 matrix. Joystick X/Y require two ADC inputs and encoder quadrature requires two digital inputs.
-
-| Function | GPIO count |
-| --- | ---: |
-| 4×4 matrix | 8 |
-| Encoder A/B | 2 |
-| Joystick X/Y | 2 ADC |
+| RGB data | 1 |
 | Total | 12 |
 
-At least one reverse-side GPIO is therefore required before adding lighting. The analog stick's potentiometers also draw current continuously unless their supply is switched. Exact current depends on the selected part.
+The non-Plus XIAO exposes 11 edge GPIOs, so this baseline requires at least one reverse-side GPIO. A controllable LED power switch, battery sensing, or future features may require additional reverse-side pads or a revised circuit.
+
+### SKRHABE010 constraints
+
+- Part: Alps Alpine SKRHABE010
+- Type: surface-mount, four digital directions with center push
+- Body dimensions: 7.35×7.5×1.8mm
+- Operating force: 1.23N direction, 2.35N center push
+- Rated operating life: 200,000 cycles for each direction and center push
+- Supply status: discontinued by the manufacturer
+
+Secure multiple genuine parts before PCB ordering and verify the footprint against the manufacturer's land pattern. The enclosure must protect the small switch from excessive side load.
 
 ## Lighting priority
 
-ChatGPT Desktop supplies status for six Agent slots. If LEDs are included, prioritize one independently addressable RGB LED per Agent key. A single serial data line is enough for addressable LEDs, but LED current can dominate the power budget.
+Place one independently addressable RGB LED under every one of the 13 key switches. The chain uses one serial data GPIO, and all keys act as a status-animation surface. ChatGPT Desktop status, BLE state, charging, low battery, and errors can be rendered across the chain. LED current can dominate the power budget.
 
 Provide firmware controls for:
 
 - global brightness limit
 - automatic timeout
 - complete LED power-off during deep sleep
-- optional per-key status animation
+- per-key status animation
 
 The LED part, voltage compatibility, bypass capacitors, bulk capacitance, and data-level requirements remain open.
 
@@ -78,7 +77,6 @@ Do not estimate runtime until the BLE PoC, scan loop, joystick, and LEDs have be
 
 ## Open part selections
 
-- joystick type and exact part number
 - rotary encoder and knob
 - Choc V2 hot-swap socket or direct soldering
 - switch diodes
