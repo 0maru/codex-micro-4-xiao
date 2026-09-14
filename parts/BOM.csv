@@ -1,13 +1,13 @@
 Category,Part,Manufacturer,Part number,Quantity,Status,Source,Notes
-MCU,XIAO nRF52840,Seeed Studio,,1,Owned,https://wiki.seeedstudio.com/XIAO_BLE/,Non-Plus model
+MCU,XIAO nRF52840,Seeed Studio,,1,Owned,https://wiki.seeedstudio.com/XIAO_BLE/,Non-Plus model; builder directly solders board and reverse-side GPIO wiring
 Switch,Mist silent linear switch,JezailFunder / Kailh,,13,Purchased,https://jezailfunder.jp/products/mist-switch,Kailh Choc V2 compatible; spares excluded
 Keycap,LCK AI keycap set,JezailFunder,,1 set,Purchased,https://jezailfunder.jp/products/lck-ai-keycap-set,Final legend-to-control mapping TBD
-Socket,Choc V2 compatible hot-swap socket,,,13,Required - part TBD,,Hot-swap confirmed for all 13 keys; verify Mist compatibility footprint PCB thickness and RGB clearance; spares excluded
+Socket,Choc hot-swap socket,Kailh,CPG135001S30,13,Selected,https://www.kailhswitch.com/mechanical-keyboard-switches/box-switches/choc-type-hot-swap-socket.html,Builder assembly; selection fixed but Mist fit footprint PCB thickness and RGB clearance unverified; spares excluded
 Diode,Matrix diode,,,19,TBD,,For 13 keys encoder push and SKRHABE010 five contacts; package and direction TBD
-Encoder,Rotary encoder with push switch,,,1,TBD,,Confirm body height shaft length detents and footprint
-Knob,Encoder knob,,,1,TBD,,Match encoder shaft
+Encoder,Rotary encoder with push switch,Bourns,PEC11R-4215F-S0024,1,Selected - assembly pending,https://www.bourns.com/docs/product-datasheets/pec11r.pdf,Outsource assembly; confirm sourcing manufacturer-compatible soldering process and footprint
+Knob,Encoder knob,,,1,Deferred,,Builder chooses and purchases later; protrusion allowed; verify shaft fit maximum diameter and push clearance
 Joystick,4-direction switch with center push,Alps Alpine,SKRHABE010,1,Selected,https://tech.alpsalpine.com/e/products/detail/SKRHABE010/,Discontinued; secure and inspect multiple genuine parts before PCB ordering
-LED,Addressable RGB LED,,,13,TBD,,One under every key; voltage standby current and power gating TBD
+LED,Addressable RGB LED,OPSCO Optoelectronics,SK6803MINI-E-001,13,Selected,https://jlcpcb.com/partdetail/5951765-SK6803MINI_E001/C5242955,JLCPCB C5242955; outsource assembly; exact datasheet supply logic current power gating and footprint validation pending
 Battery,Protected LiPo 3.7V,,,1,TBD,,Capacity after measured current
 Connector,Battery connector,,,1,TBD,,Document polarity
 Power switch,Slide switch,,,1,TBD,,Must disconnect battery safely
