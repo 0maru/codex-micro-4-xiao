@@ -45,6 +45,8 @@ KLEの生データは[`layout/keyboard-layout.json`](layout/keyboard-layout.json
 
 仕様は[`docs/`](docs/)にまとめています。未確認事項は推測と区別し、実機で確認できた内容だけを「検証済み」へ移します。
 
+PCB発注までの具体的な作業と完了条件は、[`docs/pcb-order-checklist.md`](docs/pcb-order-checklist.md)で管理します。
+
 ## 参考資料
 
 - [OpenAI: Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro)
