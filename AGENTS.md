@@ -11,7 +11,7 @@
 
 - Target Seeed Studio XIAO nRF52840, non-Plus model.
 - Preserve the 13-key KLE layout unless a design decision explicitly changes it.
-- The top-left control is a joystick and the top-right control is a rotary encoder.
+- The top-left control is a rotary encoder and the top-right control is a joystick.
 - Key switches are Kailh Choc V2-compatible JezailFunder Mist switches.
 - Optimize for BLE battery life. Status lighting must be dimmable and able to turn off.
 - Do not finalize footprints before the exact encoder, joystick, socket, and battery connector parts are selected.

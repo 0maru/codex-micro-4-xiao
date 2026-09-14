@@ -5,7 +5,7 @@
 | Date | Decision | Reason |
 | --- | --- | --- |
 | 2026-09-14 | Use 13 independent keys | Allows all purchased 1U keycaps to have separate actions |
-| 2026-09-14 | Place joystick at top-left and encoder at top-right | Matches the selected physical layout |
+| 2026-09-14 | Place encoder at top-left and joystick at top-right | Makes joystick operation easier for right-handed users |
 | 2026-09-14 | Use XIAO nRF52840 non-Plus | Already owned and suitable for low-power BLE |
 | 2026-09-14 | Use JezailFunder Mist switches | Purchased; quiet Choc V2-compatible linear switch |
 | 2026-09-14 | Use LCK AI keycaps | Purchased for the intended command layout |

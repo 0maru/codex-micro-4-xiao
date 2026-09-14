@@ -4,8 +4,8 @@
 
 - Seeed Studio XIAO nRF52840, non-Plus model
 - 13 independent Kailh Choc V2-compatible switches
-- Top-left joystick
-- Top-right rotary encoder with push switch
+- Top-left rotary encoder with push switch
+- Top-right joystick, placed for right-handed operation
 - Bluetooth Low Energy operation from a rechargeable LiPo battery
 - USB-C access for charging, flashing, recovery, and development logs
 
