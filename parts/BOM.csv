@@ -1,0 +1,16 @@
+Category,Part,Manufacturer,Part number,Quantity,Status,Source,Notes
+MCU,XIAO nRF52840,Seeed Studio,,1,Owned,https://wiki.seeedstudio.com/XIAO_BLE/,Non-Plus model
+Switch,Mist silent linear switch,JezailFunder / Kailh,,13,Purchased,https://jezailfunder.jp/products/mist-switch,Kailh Choc V2 compatible; spares excluded
+Keycap,LCK AI keycap set,JezailFunder,,1 set,Purchased,https://jezailfunder.jp/products/lck-ai-keycap-set,Final legend-to-control mapping TBD
+Socket,Choc V2 compatible hot-swap socket,,,13,TBD,,Verify footprint and switch compatibility
+Diode,Matrix diode,,,13,TBD,,Package and direction TBD
+Encoder,Rotary encoder with push switch,,,1,TBD,,Confirm body height shaft length detents and footprint
+Knob,Encoder knob,,,1,TBD,,Match encoder shaft
+Joystick,Digital or analog joystick,,,1,TBD,,Exact input type and footprint not selected
+LED,Addressable RGB LED,,,6,TBD,,Agent status priority; voltage and standby current TBD
+Battery,Protected LiPo 3.7V,,,1,TBD,,Capacity after measured current
+Connector,Battery connector,,,1,TBD,,Document polarity
+Power switch,Slide switch,,,1,TBD,,Must disconnect battery safely
+PCB,Main PCB,,,1,TBD,,KiCad design
+Plate,Choc V2 switch plate,,,1,TBD,,Material and thickness TBD
+Case,Enclosure,,,1,TBD,,Manufacturing process TBD
